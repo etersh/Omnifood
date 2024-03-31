@@ -14,7 +14,9 @@ Bold : 700
 - LINE HEIGHTS
 Default : 1
 Small : 1.05
+Medium : 1.2
 Paragraph default : 1.6
+Large : 1.8
 
 - LETTER SPACING
 Default : 1
@@ -72,6 +74,7 @@ https://coolors.co/contrast-checker/
 html {
   /* font-size: 10px; */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -79,6 +82,11 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  /* Only works if there is nothing absolutely positioned
+  in relation to body
+  */
+  overflow-x: hidden;
 }
 
 /*************************/
@@ -121,12 +129,14 @@ body {
 }
 
 .grid--4-cols {
-  grid-template-columns: repeat(4, 1fr); /* 1fr 1fr 1fr*/
+  grid-template-columns: repeat(4, 1fr);
 }
 
+/* 
 .grid--5-cols {
-  grid-template-columns: repeat(5, 1fr); /* 1fr 1fr 1fr*/
-}
+  grid-template-columns: repeat(5, 1fr);
+} 
+*/
 
 .heading-primary,
 .heading-secondary {
@@ -254,6 +264,7 @@ body {
   align-items: center;
   font-size: 1.8rem;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon {
